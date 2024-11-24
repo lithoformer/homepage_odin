@@ -5,6 +5,15 @@
     font-family: 'Ubuntu Mono', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.outer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
 .header {
     position: absolute;
     display: grid;
@@ -28,7 +37,6 @@
     z-index: 4;
     background-position: center;
     background-size: cover;
-    /* margin: 250px 100px 0 200px; */
     box-shadow: 5px 5px 5px slategray;
 }
 
@@ -48,7 +56,6 @@
     height: 500px;
     width: 500px;
     background-color: white;
-    /* margin: 250px 100px 0 200px; */
     box-shadow: 5px 5px 5px slategray;
     z-index: 2;
 }
@@ -188,16 +195,12 @@
 .project {
     display: flex;
     font-size: 30px;
-    /* align-content: center; */
     align-items: center;
     justify-content: space-between;
-    /* grid-template-columns: repeat(10, 1fr); */
     margin: 10px;
 }
 
 .devicon-github-original .colored .project {
-    /* display: grid;
-    grid-column: 9 / 10; */
     font-size: 30px;
 }
 
@@ -207,8 +210,6 @@
 }
 
 .open_svg {
-    /* display: grid;
-    grid-column: 10 / 11; */
     font-size: 30px;
 }
 
@@ -218,4 +219,10 @@
 
 .mywork {
     font-size: 50px;
+}
+
+.bottom {
+    display: flex;
+    position: relative;
+    width: 100%;
 }
