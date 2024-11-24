@@ -13,7 +13,6 @@
 }
 
 .header {
-    /* position: absolute; */
     display: grid;
     background-color: slategray;
     transform: skewY(-20deg);
@@ -106,7 +105,6 @@
 
 .main {
     margin-top: 400px;
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -207,10 +205,6 @@
     display: flex;
 }
 
-.open_svg {
-    font-size: 30px;
-}
-
 .desc {
     margin: 10px;
 }
@@ -222,7 +216,6 @@
 .bottom {
     display: flex;
     margin-top: 100px;
-    /* position: absolute; */
     background-color: slategray;
     width: 100%;
 }
@@ -230,16 +223,39 @@
 .bottomtext {
     display: flex;
     flex-direction: column;
+    margin: 50px;
+    width: 50%;
 }
 
 .contactme {
     font-size: 50px;
 }
 
+.contactext {
+    font-size: 30px;
+}
+
 .bottomphoto {
     display: flex;
     background-image: url('pexels-olly-3760778.jpg');
     height: 500px;
+    width: 600px;
     background-position: center;
     background-size: cover;
+    margin: 50px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.icon_container_bot {
+    display: flex;
+    justify-content: flex-start;
 }
