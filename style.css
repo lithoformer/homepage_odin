@@ -7,15 +7,13 @@
 
 .outer {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 100%;
 }
 
 .header {
-    position: absolute;
+    /* position: absolute; */
     display: grid;
     background-color: slategray;
     transform: skewY(-20deg);
@@ -107,8 +105,8 @@
 }
 
 .main {
-    margin-top: 800px;
-    position: absolute;
+    margin-top: 400px;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -223,6 +221,25 @@
 
 .bottom {
     display: flex;
-    position: relative;
+    margin-top: 100px;
+    /* position: absolute; */
+    background-color: slategray;
     width: 100%;
+}
+
+.bottomtext {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactme {
+    font-size: 50px;
+}
+
+.bottomphoto {
+    display: flex;
+    background-image: url('pexels-olly-3760778.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
 }
