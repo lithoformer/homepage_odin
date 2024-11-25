@@ -31,16 +31,18 @@
 
 .portrait1 {
     display: grid;
-    grid-row: 9 / 12;
-    grid-column: 5 / 10;
+    grid-row: 8 / 12;
+    grid-column: 2 / 10;
     position: absolute;
     background-image: url('pexels-olly-3760809.jpg');
-    height: 500px;
-    width: 500px;
-    z-index: 4;
+    height: 35vw;
+    width: 35vw;
+    z-index: 3;
     background-position: center;
     background-size: cover;
     box-shadow: 5px 5px 5px slategray;
+    align-items: end;
+    text-align: center;
 }
 
 .name,
@@ -48,16 +50,37 @@
     font-size: 50px;
 }
 
+.name {
+    color: white;
+}
+
+.ptext,
+.about_text,
+.icon_container {
+    margin: 1vw;
+}
+
+.ptext,
+.about_text {
+    margin-left: 3vw;
+}
+
+.ptext {
+    font-size: 20px;
+}
+
 .about {
     position: absolute;
     display: flex;
-    grid-row: 10 / 15;
-    grid-column: 8 / 15;
-    height: 500px;
-    width: 500px;
+    flex-direction: column;
+    grid-row: 9 / 15;
+    grid-column: 7 / 13;
+    height: 30vw;
+    width: 55vw;
+    justify-content: space-between;
     background-color: white;
     box-shadow: 5px 5px 5px slategray;
-    z-index: 3;
+    z-index: 2;
 }
 
 .header_content {
@@ -71,10 +94,8 @@
 }
 
 .icon_container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: 9/10;
-    grid-column: 9/10;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .devicon-twitter-original,
@@ -111,9 +132,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100% - 100px;
-    /* width: 100%; */
-    /* gap: 100px; */
-    /* margin: 100px; */
 }
 
 .card {
@@ -210,7 +228,7 @@
 
 .mywork {
     font-size: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .bottom {
@@ -268,7 +286,7 @@
     flex-shrink: 0;
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
 
     .header {
         margin-top: -100px;
@@ -279,16 +297,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 300px;
+        margin-top: 400px;
         min-height: 50vh;
     }
 
     .portrait1 {
         display: flex;
+        grid-row: 9 / 12;
+        grid-column: 5 / 10;
+        position: absolute;
         width: 75vw;
         height: 300px;
         align-items: flex-end;
         justify-content: center;
+        z-index: 3;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 5px 5px 5px slategray;
     }
 
     .icon_container {
@@ -297,12 +322,13 @@
     }
 
     .mywork {
+        font-size: 30px;
         text-align: center;
         margin-left: 0;
     }
 
     .name {
-        font-size: 40px;
+        font-size: 30px;
         color: white;
     }
 
@@ -312,25 +338,39 @@
         display: flex;
         flex-direction: column;
         max-width: 75vw;
+        grid-row: 10 / 16;
+        grid-column: 8 / 16;
+        height: 500px;
+        width: 500px;
+        background-color: white;
+        box-shadow: 5px 5px 5px slategray;
+        z-index: 2;
         box-shadow: none;
     }
 
     .about_text {
         position: relative;
-        font-size: 40px;
+        font-size: 30px;
         display: flex;
         z-index: auto;
         justify-content: center;
+        margin: 0;
+    }
+
+    .icon_container {
+        margin: 0;
     }
 
     .ptext {
         position: relative;
         display: flex;
+        margin: 0;
+        font-size: 15px;
     }
 
     .main {
         position: relative;
-        margin-top: calc(1000px - 50vw);
+        margin-top: calc(900px - 50vw);
         align-items: center;
     }
 
@@ -384,7 +424,7 @@
     }
 }
 
-@media (500px < width < 1000px) {
+@media (600px < width < 1200px) {
 
     .header_content {
         position: relative;
@@ -394,23 +434,43 @@
 
     .portrait1 {
         display: grid;
+        grid-row: 9 / 12;
+        grid-column: 5 / 10;
         position: absolute;
+        background-image: url('pexels-olly-3760809.jpg');
+        height: 500px;
+        width: 500px;
         z-index: 3;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 5px 5px 5px slategray;
     }
 
     .about {
         display: block;
         grid-row: 13 / 16;
         grid-column: 12 / 16;
+        height: 500px;
+        width: 500px;
         position: absolute;
         max-width: calc(100vw - 100px);
-        height: auto;
         z-index: 2;
         text-wrap: wrap;
     }
 
+    .name,
     .about_text {
-        font-size: 40px;
+        font-size: 45px;
+        margin: 0;
+    }
+
+    .ptext {
+        font-size: 15px;
+    }
+
+    .ptext,
+    .icon_container {
+        margin: 0;
     }
 
     .icon_container {
@@ -430,6 +490,7 @@
     }
 
     .name {
+        color: white;
         justify-content: center;
     }
 
@@ -438,7 +499,7 @@
     }
 
     .mywork {
-        margin-left: 70px;
+        margin-left: 100px;
     }
 
     .card {
