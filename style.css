@@ -53,19 +53,10 @@
     display: flex;
     grid-row: 10 / 15;
     grid-column: 8 / 15;
-    /* grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(10, 1fr); */
     height: 500px;
     width: 500px;
     background-color: white;
     box-shadow: 5px 5px 5px slategray;
-    z-index: 3;
-}
-
-.ptext {
-    position: absolute;
-    /* display: grid; */
-    grid-row: 4 / 7;
     z-index: 3;
 }
 
@@ -118,17 +109,19 @@
 .card_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100% - 100px;
-    gap: 100px;
-    margin: 100px;
+    /* width: 100%; */
+    /* gap: 100px; */
+    /* margin: 100px; */
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
     height: 500px;
+    margin: 100px;
     box-shadow: 5px 5px 5px slategray;
     border: 1px solid black;
     box-sizing: border-box;
@@ -222,7 +215,7 @@
 
 .bottom {
     display: flex;
-    margin-top: 100px;
+    justify-content: space-between;
     background-color: slategray;
     width: 100%;
 }
@@ -230,7 +223,7 @@
 .bottomtext {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 100px;
     width: 50%;
 }
 
@@ -253,7 +246,7 @@
     width: 600px;
     background-position: center;
     background-size: cover;
-    margin: 50px;
+    margin: 100px;
 }
 
 .phone {
@@ -287,7 +280,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 300px;
-        max-height: 30vh;
+        min-height: 50vh;
     }
 
     .portrait1 {
@@ -304,8 +297,8 @@
     }
 
     .mywork {
-        margin: 100px 0 0 0;
-        align-items: center;
+        text-align: center;
+        margin-left: 0;
     }
 
     .name {
@@ -336,6 +329,8 @@
     }
 
     .main {
+        position: relative;
+        margin-top: calc(1000px - 50vw);
         align-items: center;
     }
 
@@ -348,8 +343,8 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        width: 100%;
-        gap: 100px;
+        width: calc(100vw + 200px);
+        margin: 0;
     }
 
     .card {
@@ -381,7 +376,6 @@
 
     .bottomphoto {
         display: flex;
-        background-image: url('pexels-olly-3760778.jpg');
         height: 400px;
         width: 100%;
         background-position: center;
@@ -409,6 +403,8 @@
         grid-row: 13 / 16;
         grid-column: 12 / 16;
         position: absolute;
+        max-width: calc(100vw - 100px);
+        height: auto;
         z-index: 2;
         text-wrap: wrap;
     }
@@ -425,7 +421,7 @@
     .placeholder {
         display: block;
         float: left;
-        width: 315px;
+        width: calc(725px - 50vw);
         height: 300px;
     }
 
@@ -437,21 +433,51 @@
         justify-content: center;
     }
 
+    .main {
+        margin-top: 450px;
+    }
+
+    .mywork {
+        margin-left: 70px;
+    }
+
     .card {
         display: flex;
-        flex-direction: column;
         width: 300px;
         height: 400px;
         box-shadow: 5px 5px 5px slategray;
         border: 1px solid black;
         box-sizing: border-box;
+        margin: 25px;
     }
 
     .card_container {
-        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 0 50px 0;
+        gap: 0px;
     }
 
     .contactme {
         font-size: 40px;
+    }
+
+    .bottom {
+        width: 100%;
+    }
+
+    .bottomphoto {
+        display: flex;
+        width: 600px;
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        margin: 50px;
+    }
+
+    .bottomtext {
+        margin: 50px;
     }
 }
