@@ -13,6 +13,11 @@
     height: 100%;
 }
 
+.placeholder {
+    display: none;
+    float: left;
+}
+
 .header {
     display: grid;
     background-color: slategray;
@@ -45,12 +50,11 @@
 
 .about {
     position: absolute;
-    display: grid;
+    display: flex;
     grid-row: 10 / 15;
     grid-column: 8 / 15;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(10, 1fr);
-    position: absolute;
+    /* grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr); */
     height: 500px;
     width: 500px;
     background-color: white;
@@ -60,7 +64,7 @@
 
 .ptext {
     position: absolute;
-    display: grid;
+    /* display: grid; */
     grid-row: 4 / 7;
     z-index: 3;
 }
@@ -282,11 +286,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 300px;
         max-height: 30vh;
     }
 
     .portrait1 {
-        /* position: relative; */
         display: flex;
         width: 75vw;
         height: 300px;
@@ -383,5 +387,71 @@
         background-position: center;
         background-size: cover;
         margin: 0;
+    }
+}
+
+@media (500px < width < 1000px) {
+
+    .header_content {
+        position: relative;
+        display: grid;
+        margin: 50px 450px 200px -50px;
+    }
+
+    .portrait1 {
+        display: grid;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .about {
+        display: block;
+        grid-row: 13 / 16;
+        grid-column: 12 / 16;
+        position: absolute;
+        z-index: 2;
+        text-wrap: wrap;
+    }
+
+    .about_text {
+        font-size: 40px;
+    }
+
+    .icon_container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .placeholder {
+        display: block;
+        float: left;
+        width: 315px;
+        height: 300px;
+    }
+
+    .project {
+        font-size: 25px;
+    }
+
+    .name {
+        justify-content: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 400px;
+        box-shadow: 5px 5px 5px slategray;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .card_container {
+        margin: 50px;
+    }
+
+    .contactme {
+        font-size: 40px;
     }
 }
