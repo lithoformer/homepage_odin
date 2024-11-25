@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
 }
 
@@ -18,8 +19,8 @@
     transform: skewY(-20deg);
     z-index: 0;
     width: 100%;
-    min-height: 50vw;
-    margin-top: -400px;
+    height: 1000px;
+    margin-top: -500px;
     box-shadow: 5px 5px 5px slategray;
 }
 
@@ -54,14 +55,14 @@
     width: 500px;
     background-color: white;
     box-shadow: 5px 5px 5px slategray;
-    z-index: 2;
+    z-index: 3;
 }
 
 .ptext {
     position: absolute;
     display: grid;
-    grid-row: 1/9;
-    z-index: 4;
+    grid-row: 4 / 7;
+    z-index: 3;
 }
 
 .header_content {
@@ -104,11 +105,19 @@
 }
 
 .main {
-    margin-top: 400px;
+    margin-top: 550px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 100px;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100% - 100px;
+    gap: 100px;
+    margin: 100px;
 }
 
 .card {
@@ -181,13 +190,6 @@
     align-content: center;
 }
 
-.card_container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 100px;
-}
-
 .project {
     display: flex;
     font-size: 30px;
@@ -211,6 +213,7 @@
 
 .mywork {
     font-size: 50px;
+    margin-left: 50px;
 }
 
 .bottom {
@@ -269,10 +272,78 @@
 }
 
 @media (max-width:500px) {
+
+    .header {
+        margin-top: -100px;
+        height: 100vw;
+    }
+
+    .header_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 30vh;
+    }
+
+    .portrait1 {
+        /* position: relative; */
+        display: flex;
+        width: 75vw;
+        height: 300px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .icon_container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .mywork {
+        margin: 100px 0 0 0;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 40px;
+        color: white;
+    }
+
+    .about {
+        position: relative;
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+        max-width: 75vw;
+        box-shadow: none;
+    }
+
+    .about_text {
+        position: relative;
+        font-size: 40px;
+        display: flex;
+        z-index: auto;
+        justify-content: center;
+    }
+
+    .ptext {
+        position: relative;
+        display: flex;
+    }
+
+    .main {
+        align-items: center;
+    }
+
+    .project {
+        font-size: 25px;
+    }
+
     .card_container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
         width: 100%;
         gap: 100px;
     }
@@ -307,9 +378,10 @@
     .bottomphoto {
         display: flex;
         background-image: url('pexels-olly-3760778.jpg');
-        height: 300px;
-        width: 300px;
+        height: 400px;
+        width: 100%;
         background-position: center;
         background-size: cover;
+        margin: 0;
     }
 }
